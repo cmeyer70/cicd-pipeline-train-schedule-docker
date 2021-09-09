@@ -1,7 +1,7 @@
 FROM node:carbon
 WORKDIR /usr/src/app
 COPY package*.json ./
-RUN ls -lah node_modules/
+RUN ls -lah ./
 RUN npm cache clean --force
 RUN npm install --loglevel verbose --force
 COPY . . 
